@@ -1,0 +1,12 @@
+// decimal_to_hexadecimal.cpp
+
+#include <sstream>
+#include <string>
+
+// Function: decimalToHexadecimal
+// Purpose: Converts a decimal (base-10) integer to its hexadecimal (base-16) string equivalent.
+std::string decimalToHexadecimal(int decimalNumber) {
+    std::stringstream ss;
+    ss << std::hex << decimalNumber;
+    return ss.str();
+}
