@@ -1,0 +1,29 @@
+# Makefile
+
+CXX = g++
+CXXFLAGS = -Wall -std=c++11
+
+OBJS = main.o decimal_to_binary.o binary_to_decimal.o decimal_to_hexadecimal.o hexadecimal_to_decimal.o
+
+all: converter
+
+converter: $(OBJS)
+	$(CXX) $(CXXFLAGS) -o converter $(OBJS)
+
+main.o: main.cpp
+	$(CXX) $(CXXFLAGS) -c main.cpp
+
+decimal_to_binary.o: decimal_to_binary.cpp
+	$(CXX) $(CXXFLAGS) -c decimal_to_binary.cpp
+
+binary_to_decimal.o: binary_to_decimal.cpp
+	$(CXX) $(CXXFLAGS) -c binary_to_decimal.cpp
+
+decimal_to_hexadecimal.o: decimal_to_hexadecimal.cpp
+	$(CXX) $(CXXFLAGS) -c decimal_to_hexadecimal.cpp
+
+hexadecimal_to_decimal.o: hexadecimal_to_decimal.cpp
+	$(CXX) $(CXXFLAGS) -c hexadecimal_to_decimal.cpp
+
+clean:
+	rm -f converter $(OBJS)
