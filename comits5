@@ -1,0 +1,32 @@
+// main.cpp
+
+#include <iostream>
+#include <string>
+
+// Function declarations
+std::string decimalToBinary(int decimalNumber);
+int binaryToDecimal(const std::string &binaryString);
+std::string decimalToHexadecimal(int decimalNumber);
+int hexadecimalToDecimal(const std::string &hexString);
+
+int main() {
+    // Test the functions
+    
+    // Decimal to Binary
+    int decimal = 10;
+    std::cout << "Decimal to Binary: " << decimalToBinary(decimal) << std::endl;  // Output: 1010
+    
+    // Binary to Decimal
+    std::string binary = "1010";
+    std::cout << "Binary to Decimal: " << binaryToDecimal(binary) << std::endl;  // Output: 10
+    
+    // Decimal to Hexadecimal
+    decimal = 255;
+    std::cout << "Decimal to Hexadecimal: " << decimalToHexadecimal(decimal) << std::endl;  // Output: ff
+    
+    // Hexadecimal to Decimal
+    std::string hex = "ff";
+    std::cout << "Hexadecimal to Decimal: " << hexadecimalToDecimal(hex) << std::endl;  // Output: 255
+
+    return 0;
+}
