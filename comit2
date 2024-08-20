@@ -1,0 +1,13 @@
+// binary_to_decimal.cpp
+
+#include <string>
+
+// Function: binaryToDecimal
+// Purpose: Converts a binary (base-2) string to its decimal (base-10) integer equivalent.
+int binaryToDecimal(const std::string &binaryString) {
+    int decimal = 0;
+    for (char digit : binaryString) {
+        decimal = decimal * 2 + (digit - '0');
+    }
+    return decimal;
+}
